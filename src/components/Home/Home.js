@@ -3,7 +3,25 @@ import React, { Component } from  'react';
 import './Home.css';
 
 class Home extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            name: 'Chris'
+        };
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                name: 'Marcelo'
+            });
+        }, 1000);
+    }
+
     render() {
+
+        console.log('Name:', this.state.name);
 
         const buttonStyle = {
             backgroundColor: 'gray',
@@ -12,7 +30,7 @@ class Home extends Component {
 
         return (
             <div className="Home">
-                <h1>Welcome to Codejobs</h1>
+                <h1>Welcome {this.state.name}</h1>
 
                 <p>
                     In this recipe you will learn how to add styles to components.
