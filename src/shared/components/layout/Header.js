@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import logo from '../../images/logo.svg';
@@ -12,7 +12,7 @@ class Header extends Component {
     render() {
         const {
             title = 'Welcome to React',
-            url ='http://localhost:3000'
+            url = 'http://localhost:3000'
         } = this.props;
 
         return (
