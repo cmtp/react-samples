@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import Todo from './Todo/Todo';
-
+import Timer from './Pomodoro/Timer';
+// import Todo from './Todo/Todo';
 // import Home from './Home/Home';
 import Header from '../shared/components/layout/Header';
 import Content from '../shared/components/layout/Content';
@@ -15,7 +15,8 @@ class App extends Component {
             <div className="App">
                 <Header title="Welcome to CodeJobs"/>
                 <Content>
-                    <Todo />
+                    <Timer />
+                    {/*<Todo />*/}
                     {/*<Home/>*/}
                 </Content>
                 <Footer/>
