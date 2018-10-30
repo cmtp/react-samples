@@ -17,7 +17,7 @@ class Notes extends Component {
     componentWillReceiveProps(nextProps) {
         if(nextProps.notes !== this.props.notes) {
             this.setState({
-                lastUpdate: moment().format(formatTime).toStrin()
+                lastUpdate: moment().format(formatTime).toString()
             });
         }
     }
