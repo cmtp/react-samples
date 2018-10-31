@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
-import Numbers from './Numbers/Numbers';
+import Xss from './Xss/Xss';
+// import Numbers from './Numbers/Numbers';
 // import Animation from './Animation/Animation';
 // import Chart from './Chart/Chart';
 // import Notes from './Notes/Notes';
@@ -12,7 +13,7 @@ import Header from '../shared/components/layout/Header';
 import Content from '../shared/components/layout/Content';
 import Footer from '../shared/components/layout/Footer';
 
-import { notes1, notes2 } from './Notes/data';
+// import { notes1, notes2 } from './Notes/data';
 
 import './App.css';
 
@@ -67,7 +68,8 @@ class App extends Component {
             <div className="App">
                 <Header title="Welcome to CodeJobs"/>
                 <Content>
-                    <Numbers />
+                    <Xss />
+                    {/*<Numbers />*/}
                     {/*<Animation />*/}
                     {/*<Chart columns={this.columns}*/}
                            {/*chartType={this.state.chartType}*/}
