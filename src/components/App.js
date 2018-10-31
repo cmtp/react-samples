@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
-import Chart from './Chart/Chart';
+import Animation from './Animation/Animation';
+// import Chart from './Chart/Chart';
 // import Notes from './Notes/Notes';
 // import Coins from './Coins/Coins';
 // import Timer from './Pomodoro/Timer';
@@ -34,17 +35,17 @@ class App extends Component {
         ];
     }
 
-    setBarChart = () => {
-        this.setState({
-            chartType: 'bar'
-        });
-    }
-
-    setLineChart = () => {
-        this.setState({
-            chartType: 'line'
-        });
-    }
+    // setBarChart = () => {
+    //     this.setState({
+    //         chartType: 'bar'
+    //     });
+    // }
+    //
+    // setLineChart = () => {
+    //     this.setState({
+    //         chartType: 'line'
+    //     });
+    // }
 
     // componentDidMount() {
     //     setTimeout(() => {
@@ -65,14 +66,15 @@ class App extends Component {
             <div className="App">
                 <Header title="Welcome to CodeJobs"/>
                 <Content>
-                    <Chart columns={this.columns}
-                           chartType={this.state.chartType}
-                    />
-                    <p>
-                        Chart Type
-                        <button onClick={this.setBarChart}>Bar</button>
-                        <button onClick={this.setLineChart}>Line</button>
-                    </p>
+                    <Animation />
+                    {/*<Chart columns={this.columns}*/}
+                           {/*chartType={this.state.chartType}*/}
+                    {/*/>*/}
+                    {/*<p>*/}
+                        {/*Chart Type*/}
+                        {/*<button onClick={this.setBarChart}>Bar</button>*/}
+                        {/*<button onClick={this.setLineChart}>Line</button>*/}
+                    {/*</p>*/}
 
                     {/*<Notes notes={this.state.notes}/>*/}
                     {/*<Coins />*/}
