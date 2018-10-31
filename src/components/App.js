@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 
-import Animation from './Animation/Animation';
+import Numbers from './Numbers/Numbers';
+// import Animation from './Animation/Animation';
 // import Chart from './Chart/Chart';
 // import Notes from './Notes/Notes';
 // import Coins from './Coins/Coins';
 // import Timer from './Pomodoro/Timer';
-import Todo from './Todo/Todo';
+// import Todo from './Todo/Todo';
 // import Home from './Home/Home';
 import Header from '../shared/components/layout/Header';
 import Content from '../shared/components/layout/Content';
@@ -66,7 +67,8 @@ class App extends Component {
             <div className="App">
                 <Header title="Welcome to CodeJobs"/>
                 <Content>
-                    <Animation />
+                    <Numbers />
+                    {/*<Animation />*/}
                     {/*<Chart columns={this.columns}*/}
                            {/*chartType={this.state.chartType}*/}
                     {/*/>*/}
