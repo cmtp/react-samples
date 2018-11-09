@@ -30,7 +30,12 @@ class Person extends Component {
 
   handleOnSubmit = e => {
     e.preventDefault();
-    const { firstName, lastName, email, phone } = this.state;
+    const { 
+      firstName, 
+      lastName, 
+      email, 
+      phone 
+    } = this.state;
 
     this.setState({
       errors: {
