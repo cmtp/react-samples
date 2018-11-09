@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Popup from 'react-popup';
+
 import './Person.css';
 
 class Person extends Component {
@@ -29,12 +31,33 @@ class Person extends Component {
   handleOnSubmit = e => {
     e.preventDefault();
     const { firstName, lastName, email, phone } = this.state;
+
     this.setState({
       errors: {
         firstName: firstName === '',
         lastName: lastName === '',
       },
     });
+
+    if(firstName !== '' && lastName !== '' && email !== '') {
+      Popup.create({
+        title: 'Person Information',
+        content: (
+          <div>
+            <p><strong>Name</strong> {firstName} {lastName}</p>
+            <p><strong>Email</strong> {email}</p>
+            {phone && <p><strong>Phone:</strong> {phone}</p>}
+          </div>
+        ),
+        buttons: {
+          right: [{
+            text: 'Close',
+            action: popup => popup.close()
+          }]
+        }
+      });
+    }
+
     const data = {
       firstName,
       lastName,

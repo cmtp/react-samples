@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Popup from 'react-popup';
 
-import Person from "./Person/Person";
+import Person from './Person/Person';
 // import Calculator from './Calculator/Calculator';
 // import Xss from './Xss/Xss';
 // import Numbers from './Numbers/Numbers';
@@ -18,6 +19,7 @@ import Footer from '../shared/components/layout/Footer';
 // import { notes1, notes2 } from './Notes/data';
 
 import './App.css';
+import './Popup.css';
 
 class App extends Component {
   constructor(props) {
@@ -90,6 +92,8 @@ class App extends Component {
           {/*<Home/>*/}
         </Content>
         <Footer />
+
+        <Popup />
       </div>
     );
   }
