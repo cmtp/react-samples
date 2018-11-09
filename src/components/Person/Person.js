@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Popup from 'react-popup';
+import Helmet from 'react-helmet';
 
 import './Person.css';
 
@@ -71,6 +72,13 @@ class Person extends Component {
   render() {
     return (
       <div className="Person">
+        <Helmet 
+          title="Person Information"
+          meta={[
+            { name: 'title', content: 'Person Information'},
+            { name: 'description', content: 'This recipe talks about React Helmet'}
+          ]}
+        />
         <form onSubmit={this.handleOnSubmit}>
           <div>
             <p>
