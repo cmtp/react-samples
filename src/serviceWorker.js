@@ -1,3 +1,4 @@
+/* eslint-disable */
 // In production, we register a service worker to serve assets from local cache.
 
 // This lets the app load faster on subsequent visits in production, and gives
@@ -97,8 +98,8 @@ function checkValidServiceWorker(swUrl, config) {
     .then(response => {
       // Ensure service worker exists, and that we really are getting a JS file.
       if (
-        response.status === 404 ||
-        response.headers.get('content-type').indexOf('javascript') === -1
+        response.status === 404
+        || response.headers.get('content-type').indexOf('javascript') === -1
       ) {
         // No service worker found. Probably a different app. Reload the page.
         navigator.serviceWorker.ready.then(registration => {

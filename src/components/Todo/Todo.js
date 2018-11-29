@@ -50,22 +50,23 @@ class Todo extends Component {
   handleOnSubmit = e => {
     e.preventDefault();
     if (this.state.task.trim() !== '') {
-      this.setState({
+      this.setState(prevState => ({
         task: '',
         items: [
-          ...this.state.items,
+          ...prevState.items,
           {
             id: uuidv4(),
-            task: this.state.task,
+            task: prevState.task,
             completed: false,
           },
         ],
-      });
+      }));
     }
   };
 
   markAsCompleted = id => {
     const foundTask = this.state.items.find(task => task.id === id);
+    /* eslint-disable */
     console.log(foundTask);
     foundTask.completed = true;
 

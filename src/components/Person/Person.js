@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Popup from 'react-popup';
 import Helmet from 'react-helmet';
@@ -31,7 +32,12 @@ class Person extends Component {
 
   handleOnSubmit = e => {
     e.preventDefault();
-    const { firstName, lastName, email, phone } = this.state;
+    const {
+      firstName,
+      lastName,
+      email,
+      phone
+    } = this.state;
 
     this.setState({
       errors: {
@@ -39,23 +45,32 @@ class Person extends Component {
         lastName: lastName === '',
       },
     });
-
-    if(firstName !== '' && lastName !== '' && email !== '') {
+    if (firstName !== '' && lastName !== '' && email !== '') {
       Popup.create({
         title: 'Person Information',
         content: (
           <div>
-            <p><strong>Name</strong> {firstName} {lastName}</p>
-            <p><strong>Email</strong> {email}</p>
-            {phone && <p><strong>Phone:</strong> {phone}</p>}
+            <p>
+              <strong>Name</strong> {firstName} {lastName}
+            </p>
+            <p>
+              <strong>Email</strong> {email}
+            </p>
+            {phone && (
+              <p>
+                <strong>Phone:</strong> {phone}
+              </p>
+            )}
           </div>
         ),
         buttons: {
-          right: [{
-            text: 'Close',
-            action: popup => popup.close()
-          }]
-        }
+          right: [
+            {
+              text: 'Close',
+              action: popup => popup.close(),
+            },
+          ],
+        },
       });
     }
 
@@ -65,18 +80,21 @@ class Person extends Component {
       email,
       phone,
     };
-
+    /* eslint-disable no-console */
     console.log('Data', data);
   };
 
   render() {
     return (
       <div className="Person">
-        <Helmet 
+        <Helmet
           title="Person Information"
           meta={[
-            { name: 'title', content: 'Person Information'},
-            { name: 'description', content: 'This recipe talks about React Helmet'}
+            { name: 'title', content: 'Person Information' },
+            {
+              name: 'description',
+              content: 'This recipe talks about React Helmet',
+            },
           ]}
         />
         <form onSubmit={this.handleOnSubmit}>
@@ -90,11 +108,11 @@ class Person extends Component {
                 name="firstName"
                 value={this.state.firstName}
                 onChange={this.handleOnChange}
-                className={
-                    this.state.errors.firstName ? 'error': ''
-                }
+                className={this.state.errors.firstName ? 'error' : ''}
               />
-              {this.state.errors.firstName && (<div className="errorMessage">Required field</div>)}
+              {this.state.errors.firstName && (
+                <div className="errorMessage">Required field</div>
+              )}
             </p>
           </div>
           <div>
@@ -107,11 +125,11 @@ class Person extends Component {
                 name="lastName"
                 value={this.state.lastName}
                 onChange={this.handleOnChange}
-                className={
-                    this.state.errors.lastName ? 'error': ''
-                }
+                className={this.state.errors.lastName ? 'error' : ''}
               />
-              {this.state.errors.lastName && <div className="errorMessage">Required field</div>}
+              {this.state.errors.lastName && (
+                <div className="errorMessage">Required field</div>
+              )}
             </p>
           </div>
           <div>
@@ -142,7 +160,7 @@ class Person extends Component {
           </div>
 
           <p>
-            <button>Save Information</button>
+            <button type="submit">Save Information</button>
           </p>
         </form>
       </div>

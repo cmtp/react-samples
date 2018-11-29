@@ -11,7 +11,6 @@ class Calculator extends Component {
       number2: 0,
       result: 0,
     };
-
   }
 
   handleOnChange = e => {
@@ -24,10 +23,11 @@ class Calculator extends Component {
     });
   }
 
+  /* eslint-disable no-unused-vars */
   handleResult = e => {
-    this.setState({
-      result: this.state.number1 + this.state.number2,
-    });
+    this.setState(prevState => ({
+      result: prevState.number1 + prevState.number2,
+    }));
   }
 
   render() {
@@ -47,7 +47,7 @@ class Calculator extends Component {
           value={this.state.number2}
         />
         <p>
-          <button onClick={this.handleResult}>=</button>
+          <button type="button" onClick={this.handleResult}>=</button>
         </p>
         <p className="result">{this.state.result}</p>
       </div>
