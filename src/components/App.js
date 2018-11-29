@@ -1,5 +1,6 @@
 import React from 'react';
 import Popup from 'react-popup';
+import Helmet from 'react-helmet';
 
 import Person from './Person/Person';
 // import Calculator from './Calculator/Calculator';
@@ -66,6 +67,13 @@ const App = () => (
   //     document.getElementById('unmountMessage').style.color = 'white';
   // }
   <div className="App">
+    <Helmet
+      title="Person Information"
+      meta={[
+        { name: 'title', content: 'Person Information' },
+        { name: 'description', content: 'This recipe talks about React Helmet' }
+      ]}
+    />
     <Header title="Welcome to CodeJobs" />
     <Content>
       <Person />
