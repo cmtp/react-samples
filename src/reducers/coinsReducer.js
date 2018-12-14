@@ -1,6 +1,6 @@
 import {
   FETCH_COINS_SUCCESS,
-  // eslint-disable no-unused-vars
+  /* eslint-disable no-unused-vars */
   FETCH_SINGLE_COINS_SUCCESS,
 } from '../actions/actionTypes';
 
