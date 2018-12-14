@@ -22,10 +22,9 @@ Home.propTypes = {
   isMobile: bool,
 };
 
-const mapStateToProps = ({device}) => ({
+const mapStateToProps = ({ device }) => ({
   isMobile: device.isMobile,
 });
-
 
 export default connect(
   mapStateToProps,

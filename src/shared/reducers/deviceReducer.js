@@ -1,3 +1,3 @@
 export default function deviceReducer(state = {}) {
-    return state;
+  return state;
 }

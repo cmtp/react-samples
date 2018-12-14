@@ -37,7 +37,6 @@ class Notes extends Component {
   );
 
   render() {
-    console.log(this.props);
     /* eslint-disable react/prop-types */
     const {
       match: {

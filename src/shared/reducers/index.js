@@ -1,8 +1,11 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
+import coins from '../../reducers/coinsReducer';
+
 import device from './deviceReducer';
 
 const rootReducer = combineReducers({
-    device
+  coins,
+  device,
 });
 
 export default rootReducer;
