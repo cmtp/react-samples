@@ -9,6 +9,7 @@
     "dbaeumer.vscode-eslint",
     "msjsdiag.debugger-for-chrome",
     "ms-mssql.mssql",
-    "robertohuertasm.vscode-icons"
+    "robertohuertasm.vscode-icons",
+    "pnp.polacode"
   ]
 }
