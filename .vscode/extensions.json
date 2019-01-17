@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "pmneo.tsimporter",
+    "esbenp.prettier-vscode",
+    "xabikos.javascriptsnippets",
+    "wgenial.html-snippets",
+    "ecmel.vscode-html-css",
+    "waderyan.gitblame",
+    "dbaeumer.vscode-eslint",
+    "msjsdiag.debugger-for-chrome",
+    "ms-mssql.mssql",
+    "robertohuertasm.vscode-icons"
+  ]
+}
